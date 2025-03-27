@@ -1,4 +1,4 @@
-
+'''''
 
 # import numpy as np
 # arr = np.array([[1, 2, 3], [4, 5, 6]])
@@ -165,12 +165,43 @@ print(newarr)
  [ 7  8  9]
  [10 11 12]]
 '''
+'''
 
 
-import numpy as np
 
-arr = np.array([1, 2, 3, 4, 5, 4, 4])
+output : (array([3, 5, 6]),)
+'''''''''
+''
+''
 
-x = np.where(arr == 4)
 
-print(x)
+# import numpy as np
+
+# arr = np.array([1, 2, 3, 4, 5, 4, 4])
+
+# x = np.where(arr == 4)
+
+# print(x)
+
+
+
+# import numpy as np
+
+# # Creating a 3x5 rectangular matrix
+# rectangular_matrix = np.eye(3, 5)
+# print(rectangular_matrix)
+
+
+# data = np.eye((1))
+
+
+# Python Programming illustrating 
+# numpy.full method 
+
+import numpy as geek 
+
+a = geek.full([2, 2], 67, dtype = int) 
+print("\nMatrix a : \n", a) 
+
+c = geek.full([3, 3], 10.1) 
+print("\nMatrix c : \n", c) 

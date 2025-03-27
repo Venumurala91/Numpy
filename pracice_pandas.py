@@ -3,7 +3,7 @@ Pandas : It is used to work with data manipulation and data analysis
 
 topics in pandas
 
--------------------------------------------------------------------------series= series is a one dimentional labeled array
+-------series= series is a one dimentional labeled array-----------------------------------------------------------------------------
 
 Head/Tail: head(), tail()
 
@@ -21,7 +21,7 @@ String Methods: str.upper(), str.contains(), etc.
 
 
 
----------------------------------------------------------dataFrame is a two dimentional labelled axex (rows and columns)
+----dataFrame is a two dimentional labelled axex (rows and columns)
 
 Summary of Key Functions for DataFrames:
 Data Inspection: head(), tail(), info(), describe(), shape
@@ -212,10 +212,10 @@ print(df[df.columns[1:4]])
 
 
 
-import pandas as pd
+# import pandas as pd
 
-# Read the Excel file
-data = pd.read_excel("D:/Data science course_documents/test101.xlsx")
+# # Read the Excel file
+# data = pd.read_excel("D:/Data science course_documents/test101.xlsx")
 
 # Print the 'name' column
 # print(data[['Name', 'Age']])
@@ -236,20 +236,20 @@ data = pd.read_excel("D:/Data science course_documents/test101.xlsx")
 # null_columns = data.columns[data.isnull().any()].tolist()
 # print(null_columns)
 
-rows_with_nulls = data[data.isnull().any(axis=1)]
+# rows_with_nulls = data[data.isnull().any(axis=1)]
 
-# Print the 'Name' column of those rows
-print("Names of rows with null values:")
-print(rows_with_nulls['Name'])
-
-
-
-#print(total_salary)
-
-d= data[data['Salary']>85000]
-print(d)
+# # Print the 'Name' column of those rows
+# print("Names of rows with null values:")
+# print(rows_with_nulls['Name'])
 
 
+
+# #print(total_salary)
+
+# d= data[data['Salary']>85000]
+# print(d)
+
+'''
 print('----------------------')
 
 print(data.head(2))
@@ -269,3 +269,64 @@ data['Age'] = data['Age'].fillna(0)
 print(data)
 # # Fill missing values with the column's mean
 # data['Age'] = data['Age'].fillna(data['Age'].mean())
+'''
+
+# print(data.axes)
+
+
+
+
+
+
+
+# ---------------------27/03/2025---------------------------------
+import pandas as pd
+
+# Read the Excel file
+data = pd.read_excel("D:/Data science course_documents/test101.xlsx")
+
+# Print the 'name' column
+print(data[['Name', 'Age']])
+
+# print(data.describe())
+
+print(data.info())
+
+print(data.head())
+
+print(data.tail())
+
+print(data.info())
+
+print(data.shape)
+print(data.iloc[1:5][['JoinDate', 'Name']])
+
+
+
+
+# print(list(data.columns))
+
+# df=data.copy()
+# # data1.loc[2:5,'Age'] = None
+# # print(data1.head(30))
+
+# # data1.isnull().head(7)
+# # print(data1.isnull().sum())
+
+# df = df.sort_values(by="Age", ascending=False)  # Sort without inplace=True
+# # print(data)
+# # print(data[data.index == 20]) 
+
+# print(df[df.index.isin(range(2,10))])
+
+
+
+# print(df.loc[1])
+df=data.copy()
+
+df3 = df.copy()
+df3.dropna(inplace=True, axis=1)
+df3.head()
+
+print(df.mode())
+
