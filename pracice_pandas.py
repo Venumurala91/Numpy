@@ -143,6 +143,9 @@ series = pd.Series(data)
 # print(series.tail(2))  # Last 2 elements
 
 
+
+
+
 # print(series.dtype)
 print(series.index)
 
@@ -324,9 +327,17 @@ print(data.iloc[1:5][['JoinDate', 'Name']])
 # print(df.loc[1])
 df=data.copy()
 
-df3 = df.copy()
-df3.dropna(inplace=True, axis=1)
-df3.head()
+# df3 = df.copy()
+# df3.dropna(inplace=True, axis=1)
+# df3.head()
 
-print(df.mode())
+# print(df.mode())
 
+
+
+import pandas as pd
+
+df = pd.read_csv(r"D:\Data science course_documents\smartphones_data.csv")
+
+
+print(df)

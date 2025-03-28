@@ -1,7 +1,9 @@
 import pandas as pd
 
+# Here I downloaded excel file in koggle.com and saved in one file and  copied path.
 
 df = pd.read_csv("D:\data science course_documents\cricket_data_2025.csv")
+
 
 
 # print(df.columns)
